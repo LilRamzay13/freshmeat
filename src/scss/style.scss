@@ -1,0 +1,602 @@
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@media (min-width: 1366px) {
+    .wrapper {
+        max-width: none;
+    }
+}
+
+.header__blue {
+    @include header__width__height;
+    background: #005fae;
+}
+
+.header__silver {
+    @include header__width__height;
+    background: #f7f7f7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    margin-top: 32px;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    max-width: 1366px;
+}
+
+.navigation {
+    width: 72%;
+}
+
+.navigation__menu a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #666666;
+}
+
+.navigation__menu a:last-child {
+    color: #212121;
+}
+
+.search {
+    margin-top: 16px;
+    width: 100%;
+    position: relative;
+}
+
+.search input {
+    border: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+/* стили для поля ввода */
+.search .input {
+    /* растягиваем поле ввода на всю ширину формы */
+    width: 100%;
+
+    height: 40px;
+    background: #ffffff;
+    border: 2px solid #005fae;
+    border-radius: 3px;
+}
+
+.search .input:focus {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.4);
+    background: #e8e8e8;
+    color: #333;
+}
+
+.search .submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 100%;
+    background: #005fae;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+.navigation__back {
+    margin-top: 32px;
+    display: flex;
+}
+
+.navigation__back a {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #005fae;
+}
+
+.company__container {
+    margin-top: 16px;
+    width: 86%;
+}
+
+.company__header {
+    display: flex;
+}
+
+.company__header img {
+    display: flex;
+    margin-right: 8px;
+}
+
+.company__header h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #212121;
+}
+
+.company__feedback {
+    margin-top: 18px;
+    display: flex;
+}
+
+.company__feedback {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    color: #999999;
+}
+
+.company__feedback i {
+    margin-right: 24px;
+}
+
+.company__feedback span {
+    margin-left: 4px;
+}
+
+.company__feedback a {
+    margin-left: 4px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.company__feedback a:hover {
+    color: blue;
+    transition: 0.9s;
+}
+
+.company__feedback__button {
+    position: absolute;
+    left: 67%;
+
+    max-width: 238px;
+    height: 40px;
+
+    border: 1px solid #00c346;
+    box-sizing: border-box;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 3px;
+    background: none;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+
+    color: #00c346;
+}
+
+@media (max-width: 1366px) {
+    .company__info {
+        min-width: 320px;
+        max-width: 360px;
+        margin-left: 7%;
+    }
+}
+
+.company__main__block {
+    width: 86%;
+    margin-top: 72px;
+}
+
+.company__info {
+    width: 27%;
+    position: absolute;
+    left: 58%;
+}
+
+.company__main__info {
+    background: #f0f0f0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.company__disclamer {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    margin-bottom: 8px;
+
+    color: #212121;
+}
+
+.company__disclamer:last-child {
+    margin-bottom: 0;
+}
+
+.last__offers__container {
+    width: 57%;
+}
+
+.last__offers__header h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+    color: #212121;
+}
+
+.outline {
+    @include outline;
+}
+
+.table__header {
+    background: #f0f0f0;
+    border-radius: 3px;
+    height: 32px;
+    box-sizing: border-box;
+    padding-top: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.client__posted {
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-top: 16px;
+    width: 100%;
+    height: 60px;
+}
+
+tr {
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 8px;
+}
+
+.header__first {
+    box-sizing: border-box;
+    padding-left: 12%;
+}
+
+.status__sell {
+    @include status__sell;
+}
+
+.status__buy {
+    @include status__buy;
+}
+
+.client__offer {
+    position: relative;
+    bottom: 16px;
+    display: flex;
+}
+
+.header__third,
+.client__views {
+    box-sizing: border-box;
+    padding-left: 1%;
+}
+
+.name {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    color: #005fae;
+}
+
+.fabric {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    /* grey #99 */
+
+    color: #999999;
+}
+
+.client__offer span {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    display: flex;
+    align-items: center;
+
+    /* primary */
+
+    color: #005fae;
+}
+
+@media (max-width: 1450px) {
+    td {
+        display: block;
+    }
+
+    .header__first {
+        margin-left: 3%;
+    }
+
+    .header__third {
+        box-sizing: border-box;
+        padding-left: 31%;
+    }
+
+    .header__second {
+        box-sizing: border-box;
+        padding-left: 50%;
+    }
+
+    .header__first {
+        box-sizing: border-box;
+        padding-left: 75%;
+    }
+
+    .client__time {
+        box-sizing: border-box;
+        padding-left: 50%;
+    }
+
+    .client__views {
+        box-sizing: border-box;
+        padding-left: 31%;
+    }
+
+    .client__offer {
+        box-sizing: border-box;
+        padding-left: 70%;
+        text-align: center;
+        display: block;
+        margin-top: 16px;
+    }
+
+    .status__buy,
+    .status__sell {
+        margin-left: 30%;
+        margin-top: 8px;
+    }
+
+    .client__posted img {
+        box-sizing: border-box;
+    }
+
+    .client__posted {
+        display: flex;
+    }
+
+    td {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .company__feedback__button {
+        position: absolute;
+        left: 0;
+        margin-top: 35px;
+        margin-left: 10px;
+    }
+
+    .last__offers__container {
+        position: absolute;
+        top: 1400px;
+    }
+
+    .company__info {
+        position: absolute;
+        left: 2%;
+        margin-left: 0;
+    }
+
+    .last__offers__container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .header__first {
+        margin-left: 0;
+    }
+
+    .client__offer span {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .status__sell,
+    .status__buy {
+        margin-left: 20%;
+    }
+}
+
+.banner__first {
+    @include banner;
+    top: 124px;
+}
+
+.banner__second {
+    @include banner;
+    top: 460px;
+}
+
+@media (max-width: 1366px) {
+    aside {
+        left: 65%;
+        margin-top: 1230px;
+    }
+}
+
+@media (max-width: 767px) {
+    aside {
+        margin-top: 450px;
+        left: 69%;
+    }
+}
+
+@media (max-width: 480px) {
+    aside {
+        display: none;
+    }
+}
+
+@media (max-width: 326px) {
+    .company__info {
+        left: 0;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .company__container {
+        width: 100%;
+    }
+
+    .company__main__block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 280px) {
+    .last__offers__container {
+        width: 116%;
+    }
+
+    .company__info {
+        left: 0;
+    }
+}
+
+.photo__container {
+    width: 52%;
+    max-height: 300px;
+    position: absolute;
+    top: 1000px;
+}
+
+.photo__container__header h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+    color: #212121;
+}
+
+.photos {
+    display: flex;
+}
+
+.photos img{
+    margin-left: 10%;
+}
+
+.photos img[tabindex="0"] {
+    cursor: zoom-in;
+}
+.photos img[tabindex="0"]:focus {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    max-width: 99%;
+    max-height: 99%;
+    margin: auto;
+    box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(210, 210, 210, 0.4);
+}
+.photos img[tabindex="0"]:focus,  /* убрать строку, если не нужно, чтобы при клике на увеличенное фото, оно возвращалось в исходное состояние */
+.photos img[tabindex="0"]:focus ~ * {
+    pointer-events: none;
+    cursor: zoom-out;
+}
+
+@media (max-width: 1450px) {
+    .photo__container {
+        top: 2070px;
+    }
+}
+
+@media (max-width: 767px) {
+    .photo__container {
+        top: 3050px;
+        width: 100%;
+    }
+
+    .photos img {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo__container {
+        top: 3150px;
+    }
+}
+
+@media (max-width: 351px) {
+    .photo__container {
+        top: 3200px;
+    }
+
+    .photos img {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+}
+
+
+
